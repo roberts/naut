@@ -7,7 +7,7 @@ Polygon ERC-20 Contract for $NAUT
 - [NautRewards.com](https://NautRewards.com)
 - [X.com/NautRewards](https://X.com/NautRewards)
 
-## Specs
+## Contract Details
 
 - 420 billion total supply
 - 6% buy tax
