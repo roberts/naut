@@ -5,15 +5,15 @@
 /**
  *
  *
-   https://2pt0.xyz
-   https://x.com/usic_ai
-   https://t.me/+p0MPYXnL3Cc5MGFh
+   https://NautRewards.com
+   https://x.com/NautRewards
+   https://t.me/NautRewards
    
 
    Contract features:
-   200,000,000 tokens
-   3% buy tax in ETH sent to marketing, community & dev
-   3% sell tax in ETH sent to marketing, community & dev
+   420,000,000,000 tokens
+   6% buy tax in ETH sent to marketing, community & dev
+   12% sell tax in ETH sent to marketing, community & dev
  */
 
 // SPDX-License-Identifier: MIT
@@ -1170,7 +1170,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
     ) external;
 }
  
-contract usic is ERC20, Ownable {
+contract naut is ERC20, Ownable {
     using SafeMath for uint256;
  
     IUniswapV2Router02 public immutable uniswapV2Router;
@@ -1228,29 +1228,29 @@ contract usic is ERC20, Ownable {
         address indexed oldWallet
     );
  
-    constructor() ERC20("USICoin", "USIC") {
+    constructor() ERC20("NAUT", "NAUT") {
         uniswapV2Router = IUniswapV2Router02(
             0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D
         );
         _approve(address(this), address(uniswapV2Router), type(uint256).max);
  
-        uint256 totalSupply = 200_000_000 ether;
+        uint256 totalSupply = 420,000_000_000 ether;
  
-        maxTransactionAmount = (totalSupply) / 200; // 500,000,000 tokens
-        maxWallet = (totalSupply) / 100;  // 1% of total supply (1,000,000,000 tokens)
+        maxTransactionAmount = (totalSupply) / 100; // 1% of total supply (4,200,000,000 tokens)
+        maxWallet = (totalSupply) / 20;  // 5% of total supply (21,000,000,000 tokens)
         swapTokensAtAmount = (totalSupply * 5) / 10000;
  
-        buyMarketingFee = 1;
+        buyMarketingFee = 2;
         buyDevelopmentFee = 1;
-        buyCommunityFundFee = 1;
+        buyCommunityFundFee = 3;
         buyTotalFees =
             buyMarketingFee +
             buyDevelopmentFee +
             buyCommunityFundFee;
  
-        sellMarketingFee = 1;
-        sellDevelopmentFee = 1;
-        sellCommunityFundFee = 1;
+        sellMarketingFee = 4;
+        sellDevelopmentFee = 2;
+        sellCommunityFundFee = 6;
         sellTotalFees =
             sellMarketingFee +
             sellDevelopmentFee +
@@ -1258,9 +1258,9 @@ contract usic is ERC20, Ownable {
  
         previousFee = sellTotalFees;
  
-        marketingWallet = address(0x2C6B16adE880a3B5F3FCE087014B9dEcb13D300F); // Marketing Funds
+        marketingWallet = address(0xC6aa2f0FF6b8563EA418ec2558890D6027413699); // Marketing Funds
         developmentWallet = address(0xC6aa2f0FF6b8563EA418ec2558890D6027413699); // DrewRoberts.eth
-        communityFundWallet = address(0x08b74d0Dd543250Bf20F53E5dE9f66Ef3F88a7B9); // Community Funds
+        communityFundWallet = address(0xC6aa2f0FF6b8563EA418ec2558890D6027413699); // Community Funds
  
         excludeFromFees(owner(), true);
         excludeFromFees(address(this), true);
