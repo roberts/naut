@@ -5,7 +5,8 @@ Polygon ERC-20 Contract for $NAUT
 ## Links
 
 - [NautRewards.com](https://NautRewards.com)
-- [X.com/NautRewards](https://X.com/NautRewards)
+- [x.com/NautRewards](https://x.com/NautRewards)
+- [t.me/NautRewards](https://t.me/NautRewards)
 
 ## Contract Details
 
