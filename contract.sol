@@ -1259,7 +1259,7 @@ contract naut is ERC20, Ownable {
         previousFee = sellTotalFees;
  
         marketingWallet = address(0xa888c996f3DAAFf58d61043df286C0e4541f6842); // Marketing Funds
-        developmentWallet = address(0xC6aa2f0FF6b8563EA418ec2558890D6027413699); // DrewRoberts.eth
+        developmentWallet = address(0xC6aa2f0FF6b8563EA418ec2558890D6027413699); // Dev Funds
         communityFundWallet = address(0x1a656342D3298c5e259582863E8933C8D55ea109); // Community Funds
  
         excludeFromFees(owner(), true);
