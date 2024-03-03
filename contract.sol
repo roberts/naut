@@ -1234,7 +1234,7 @@ contract naut is ERC20, Ownable {
         );
         _approve(address(this), address(uniswapV2Router), type(uint256).max);
  
-        uint256 totalSupply = 420,000_000_000 ether;
+        uint256 totalSupply = 420_000_000_000 ether;
  
         maxTransactionAmount = (totalSupply) / 100; // 1% of total supply (4,200,000,000 tokens)
         maxWallet = (totalSupply) / 20;  // 5% of total supply (21,000,000,000 tokens)
@@ -1303,7 +1303,7 @@ contract naut is ERC20, Ownable {
         excludeFromMaxTransaction(address(uniswapV2Pair), true);
 
         uint256 tokensInWallet = balanceOf(address(this));
-        uint256 tokensToAdd = tokensInWallet * 90 / 100; // 90% of tokens in wallet go to LP
+        uint256 tokensToAdd = tokensInWallet * 100 / 100; // 100% of tokens in wallet go to LP
  
         uniswapV2Router.addLiquidityETH{value: address(this).balance}(
             address(this),
